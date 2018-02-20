@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Setup version="1.1">
+    <DomainSettings>
+        <User>xxxxx</User>
+        <Password>*************</Password>
+        <Domain>subdom.dom.com</Domain>
+		<OU>OU=VDI-Computers,DC=subdom,DC=dom,DC=lt</OU>
+        <ComputerNamePrefix>PC</ComputerNamePrefix>
+        <!-- number of last IP octets added to end of computer name 1-4 - - comment -->
+        <IPOctets>1</IPOctets>
+        <IPZeros>3</IPZeros>
+    </DomainSettings>
+    <SetupSettings>
+        <SetupTempDir>C:\SetupTMP</SetupTempDir>
+        <SetupLogFile>Setup-log.txt</SetupLogFile>
+        <TemporaryTaskName>Autorun Setup</TemporaryTaskName>
+        <!-- After SYSPREP "Shutdown", "Reboot" - - comment -->
+        <AfterSysprep>Shutdown</AfterSysprep>
+        <!-- After setup "shutdown - s", "restart - r" - - comment -->
+        <AfterSetup>s</AfterSetup>
+    </SetupSettings>
+    <Optional>
+        <UnattendedFileName>unattend.xml</UnattendedFileName>
+        <KMSServer>kms.dom.com</KMSServer>
+        <KMSClientKey>W269N-WFGWX-YVC9B-4J6C9-T83GX</KMSClientKey>
+        <OfficeVersion>16</OfficeVersion>
+        <!-- PowerShell Execution Policy "Restricted", "AllSigned", "RemoteSigned", "Unrestricted" - - comment -->
+        <PSExecutionPolicy>RemoteSigned</PSExecutionPolicy>
+    </Optional>
+</Setup>
